@@ -1,0 +1,57 @@
+.definition-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-content: center;
+    align-items: center;
+    color: black;
+}
+
+.introduction {
+    text-align: left;
+    padding-bottom: 4rem;
+}
+
+.definition-textbox {
+    border: 1px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    justify-content: center;
+    height: 400px;
+    width: 70%;
+}
+
+.definition-heading {
+    font-family: "Playfair Display", Georgia, serif;
+    display: flex;
+    height: 100px;
+    gap: 2rem;
+    align-items: center;
+}
+
+.word {
+    font-size: 3rem;
+    font-weight: 100;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    padding-bottom: 0.6rem;
+}
+
+.definition {
+    padding-bottom: 1rem;
+}
+
+.examples {
+    color: gray;
+    padding-left: 1rem;
+    border-left: 2px solid gray;
+    margin-bottom: 1rem;
+}

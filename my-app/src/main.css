@@ -1,0 +1,27 @@
+body, p {
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: +0.5px;
+    color: white;
+}
+
+h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 100;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+/* All direct children of the app container will fade/blur */
+#app > * {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1s ease, filter 1s ease;
+}
+
+#app > *.in-view {
+  opacity: 1;
+  filter: blur(0);
+}

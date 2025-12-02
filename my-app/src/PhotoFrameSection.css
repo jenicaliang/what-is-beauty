@@ -1,0 +1,52 @@
+.photo-section {
+  background: #000;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.corner-text {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Frame row */
+.frames-container {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 320px;
+}
+
+/* Individual frame */
+.frame {
+  width: 320px;
+  height: 360px;
+  background: white;
+  border: 5px solid white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Square photo mask */
+.frame-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.15s ease-out;
+}
+
+/* Label area */
+.frame-label {
+  padding: 16px 0;
+  text-align: center;
+  color: #000;
+  font-size: 1.1rem;
+  font-style: italic;
+}

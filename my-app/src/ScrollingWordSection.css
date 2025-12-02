@@ -1,0 +1,133 @@
+/* =========================
+   FULL PAGE SECTION
+========================= */
+.scroll-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  overflow: hidden;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* INTRO TEXT */
+.intro-text {
+  font-family: Helvetica, sans-serif;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-weight: 100;
+  color: white;
+}
+
+/* =========================
+   WORD SCROLL CONTAINER
+========================= */
+.word-scroll-container {
+  position: relative;
+  height: 100vh; /* stays on screen while scrolling words */
+  width: 100%;
+  overflow: hidden; /* hide words outside container */
+  z-index: 10;
+  cursor: default;
+}
+
+/* =========================
+   TEXT BOXES
+========================= */
+.text-boxes-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.single-text-box {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 100;
+  white-space: nowrap;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.word-scroll-container:hover .single-text-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   WORDS
+========================= */
+.words-wrapper {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  /* Instead of align-items: center, add top offset */
+  top: 40%; /* adjust as needed to center relative to text boxes */
+}
+
+
+.center-word {
+  position: absolute;
+  font-size: 6rem;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* =========================
+   BRACKETS
+========================= */
+.bracket-left,
+.bracket-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 6rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.bracket-left {
+  left: -70px;
+}
+
+.bracket-right {
+  right: -70px;
+}
+
+.center-word span {
+  transform: translateY(-50%) scale(1);
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+  .center-word {
+    font-size: 4rem;
+  }
+
+  .bracket-left,
+  .bracket-right {
+    font-size: 4rem;
+    left: -50px;
+    right: -50px;
+  }
+
+  .single-text-box {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

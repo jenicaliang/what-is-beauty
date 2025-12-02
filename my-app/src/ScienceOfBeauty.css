@@ -1,0 +1,135 @@
+.wiring-section {
+    padding: 10rem 2rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+.wiring-title {
+    font-weight: 100;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 5rem 0;
+}
+
+.principles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 5rem 0;
+}
+
+/* Collapsible wrapper */
+.collapsible {
+    font-family: "Playfair Display", Georgia, serif;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.8rem;
+}
+
+/* The toggle button */
+.collapsible-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Arrow */
+.arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Content area */
+.collapsible-content {
+    margin-top: 0.6rem;
+    animation: fadeIn 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.collapsible-content p {
+    color: black;
+}
+
+/* ----- Collapsible Container ----- */
+.collapsible {
+    border: 1px solid black;         /* thin border */
+    background: rgba(255, 255, 255, 0.2);  /* transparent box */
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    position: relative;              /* needed for hover image positioning */
+    overflow: visible;
+    transition: background 0.3s ease;
+}
+
+.collapsible:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* ----- Toggle Button ----- */
+.collapsible-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-family: inherit;
+}
+
+/* Arrow */
+.arrow {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+/* ----- Collapse Content ----- */
+.collapsible-content {
+    margin-top: 0.8rem;
+    animation: fadeIn 0.25s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.collapsible-content p {
+    color: black;
+    margin: 0;
+}
+
+/* ----- Hover Image Behavior ----- */
+.hover-image {
+    position: absolute;
+    top: -40px;
+    right: 60px;      /* adjust based on your layout */
+    transform: translateY(-50%);
+    width: 350px;
+    height: 150px;
+    object-fit: cover;  /* crops instead of squishing */
+    object-position: center; /* center crop (can change to top, left, etc.) */
+    opacity: 0;
+    pointer-events: none;   /* makes it not block hover */
+    transition: opacity 0.25s ease;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.collapsible:hover .hover-image {
+    opacity: 1;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-3px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

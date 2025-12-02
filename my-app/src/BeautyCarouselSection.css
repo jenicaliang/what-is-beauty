@@ -1,0 +1,133 @@
+/* Container wrapping text and carousel */
+.banner-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Text content above carousel */
+.text-content {
+    position: relative;
+    max-width: 900px;
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+}
+
+.text-content p {
+    color: black;
+    padding-bottom: 1rem;
+}
+
+.text-block {
+    margin-bottom: 1.5rem;
+}
+
+/* Banner and carousel */
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 15%; /* moved down to make space for text */
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.overlay-box h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 100;
+    color: black;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.overlay-box p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+/* Media queries */
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+        top: 25%;
+    }
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner .slider {
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+        top: 25%;
+    }
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+    }
+}

@@ -1,0 +1,64 @@
+:root {
+  --gap: 28px;
+}
+
+.three-section {
+  height: 200vh; /* overall section height */
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff57e;
+  padding: 48px 18px;
+}
+
+.three-inner {
+  height: 150vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* two rows */
+  align-items: center;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* top-align canvas and caption */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.canvas-wrap {
+  width: 70%; /* canvas takes 70% of row width */
+  height: 70vh; /* large enough for rotation */
+  min-height: 400px; /* ensures adequate height on small screens */
+  border-radius: 16px;
+  overflow: visible; /* allow model to rotate beyond edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none; /* allow pointer dragging without pan/zoom interfering */
+}
+
+.caption {
+  width: 30%; /* captions take remaining space */
+  color: black;
+  font-size: 16px;
+  line-height: 1.5rem;
+  text-align: left; /* left-align captions */
+  flex-shrink: 0; /* prevents captions from shrinking too much */
+}
+
+/* responsive adjustments */
+@media (max-width: 720px) {
+  .three-inner { grid-template-rows: 1fr 1fr; }
+  .subsection { flex-direction: column; align-items: center; }
+  .canvas-wrap { width: 100%; height: 50vh; min-height: auto; }
+  .caption { width: 100%; font-size: 13px; text-align: left; margin-top: 12px; }
+}
