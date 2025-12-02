@@ -4,8 +4,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const MODEL_URLS = [
-    "assets/models/couch.glb",
-    "assets/models/mug.glb",
+  `${import.meta.env.BASE_URL}assets/models/couch.glb`,
+  `${import.meta.env.BASE_URL}assets/models/mug.glb`,
 ];
 
 /**
@@ -256,7 +256,7 @@ export default function ThreeDSection() {
                     <div className="canvas-wrap">
                         <canvas ref={canvasRef0} className="three-canvas" />
                     </div>
-                    <div className="caption">Someone might find beauty in an old couch’s worn fabric, each mark a memory left behind by a beloved dog’s restless paws.</div>
+                    <div className="caption">Someone might find beauty in an old couch’s worn fabric, each mark a memory left behind by a beloved pet’s restless paws.</div>
                 </div>
 
                 {/* Subsection 2 */}
