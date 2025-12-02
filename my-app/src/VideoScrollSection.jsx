@@ -9,7 +9,7 @@ const VideoScrollSection = () => {
   // preload images
   for (let i = 1; i <= totalFrames; i++) {
     const img = new Image();
-    img.src = `/assets/universally_beautiful_frames/universally_beautiful_${String(i).padStart(5, "0")}.png`;
+    img.src = `assets/universally_beautiful/universally_beautiful_${String(i).padStart(5, "0")}.jpg`;
     frames.push(img);
   }
 

@@ -1,0 +1,66 @@
+   .scroll-container {
+    color: black;
+       min-height: 100vh;
+   }
+
+   .text-sequence-section {
+       height: 400vh;
+       position: relative;
+   }
+
+   span {
+        font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    font-weight: 100;
+   }
+
+   .sticky-container {
+       position: sticky;
+       top: 0;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+   }
+
+   .text-wrapper {
+       font-weight: 700;
+       text-align: center;
+       position: relative;
+       line-height: 1.2;
+       display: flex;
+       gap: 0.9em;
+   }
+
+   .static-part {
+       white-space: nowrap;
+   }
+
+   .dynamic-part {
+       position: relative;
+       min-width: 5.5em;
+       height: 1.2em;
+   }
+
+   .fade-out {
+       position: absolute;
+       left: 0;
+       top: 0;
+       white-space: nowrap;
+       transition: opacity 0.3s ease, transform 0.3s ease;
+   }
+
+   .replacement-word {
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0;
+       transform: translateY(50px);
+       white-space: nowrap;
+       transition: opacity 0.4s ease, transform 0.4s ease;
+   }
+
+   .spacer-end {
+       background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+   }

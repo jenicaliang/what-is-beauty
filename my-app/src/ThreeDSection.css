@@ -3,7 +3,6 @@
 }
 
 .three-section {
-  height: 200vh; /* overall section height */
   width: 60%;
   margin: auto;
   display: flex;

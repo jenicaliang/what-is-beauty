@@ -4,8 +4,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const MODEL_URLS = [
-  `${import.meta.env.BASE_URL}assets/models/couch.glb`,
-  `${import.meta.env.BASE_URL}assets/models/mug.glb`,
+    `${import.meta.env.BASE_URL}assets/models/couch.glb`,
+    `${import.meta.env.BASE_URL}assets/models/mug.glb`,
 ];
 
 /**
@@ -160,11 +160,15 @@ function makeScene(canvas, shapeIndex) {
     // WHEEL ZOOM
     // -------------------------------------------------------------
     function onWheel(e) {
+        e.preventDefault(); // <-- prevent page from scrolling
+
         camera.position.z += e.deltaY * 0.0015;
         camera.position.z = Math.min(Math.max(camera.position.z, 0.8), 4.0);
     }
 
-    canvas.addEventListener("wheel", onWheel, { passive: true });
+    // Use { passive: false } so preventDefault works
+    canvas.addEventListener("wheel", onWheel, { passive: false });
+
 
     // -------------------------------------------------------------
     // ANIMATION LOOP

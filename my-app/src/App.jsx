@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ScrollBackground from "./ScrollBackground.jsx";
+import ProgressBar from "./ProgressBar.jsx";
 import VideoScrollSection from "./VideoScrollSection";
 import StarsContainer from "./StarsContainer";
 import PhotoFrameSection from "./PhotoFrameSection";
@@ -10,6 +11,7 @@ import ScienceOfBeauty from "./ScienceOfBeauty";
 import WhiteToColor from "./WhiteToColor";
 import BeautyDefinition from "./BeautyDefinition";
 import ThreeDSection from "./ThreeDSection.jsx";
+import BeautyPhrase from "./BeautyPhrase.jsx";
 import "./main.css";
 
 const App = () => {
@@ -35,6 +37,7 @@ const App = () => {
 
   return (
     <div id="app">
+      <ProgressBar />
       <ScrollBackground />
       <VideoScrollSection />
       <StarsContainer />
@@ -46,6 +49,7 @@ const App = () => {
       <ScienceOfBeauty />
       <WhiteToColor />
       <ThreeDSection />
+      <BeautyPhrase />
     </div>
   );
 };
