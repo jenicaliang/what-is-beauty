@@ -50,12 +50,12 @@
 .collapsible-content {
     margin-top: 0.6rem;
     animation: fadeIn 0.3s ease;
-    line-height: 1.5;
 }
 
 .collapsible-content p {
     color: black;
         font-size: 1rem;
+        line-height: 1.7rem;
 }
 
 /* ----- Collapsible Container ----- */

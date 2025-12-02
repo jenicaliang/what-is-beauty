@@ -10,9 +10,9 @@ export default function ScrollBackground() {
 
       if (scrollY < 1200) {
         document.documentElement.style.backgroundColor = "#ffffff"; // white
-      } else if (scrollY >= 1200 && scrollY < 10300) {
+      } else if (scrollY >= 1200 && scrollY < 10400) {
         document.documentElement.style.backgroundColor = "#000000"; // black
-      } else if (scrollY >= 10300 && scrollY < 15000) {
+      } else if (scrollY >= 10400 && scrollY < 15000) {
         document.documentElement.style.backgroundColor = "#ffffff"; // white
       } else if (scrollY >= 15000) {
         document.documentElement.style.backgroundColor = "#fff57e"; // yellow
