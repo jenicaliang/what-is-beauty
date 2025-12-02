@@ -38,6 +38,14 @@
   background-color: white;
   border: none;
   padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stars-button button:hover {
+  background-color: #fff57e;
+  color: black; /* ensures text stays visible */
 }
 
 .stars-fade-wrapper {

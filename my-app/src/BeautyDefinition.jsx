@@ -19,12 +19,8 @@ export default function BeautyDefinition() {
                     exploring the natural beauty of the island
                 </div>
                 <div className="examples">
-                    A thing of beauty is a joy forever …
-                    —John Keats
-                </div>
-                <div className="examples">
-                    Buddhism has taught me that inner beauty, the beauty that comes from loving and accepting yourself, imperfections and all, radiates to the outside.
-                    —Tina Turner, quoted at nbcnews.com
+                    A thing of beauty is a joy forever…
+                    — John Keats
                 </div>
             </div>
         </section >

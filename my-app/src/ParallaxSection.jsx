@@ -17,7 +17,9 @@ const LAYERS = [
 
 export default function ParallaxSection() {
     const containerRef = useRef(null);
-    const textRef = useRef(null);
+    const titleRef = useRef(null);
+    const descriptionRef = useRef(null);
+
 
     useEffect(() => {
         const container = containerRef.current;
@@ -75,10 +77,13 @@ export default function ParallaxSection() {
                 plane.position.y = mouseY * 0.1 * (i + 1) * 0.1;
             });
 
-            // move text as well
-            if (textRef.current) {
-                textRef.current.style.transform = `translate3d(${mouseX * 20}px, ${mouseY * 20}px, 0)`;
+            if (titleRef.current) {
+                titleRef.current.style.transform = `translate3d(${mouseX * 20}px, ${mouseY * 20}px, 0)`;
             }
+            if (descriptionRef.current) {
+                descriptionRef.current.style.transform = `translate3d(${mouseX * 15}px, ${mouseY * 15}px, 0)`;
+            }
+
 
             renderer.render(scene, camera);
         }
@@ -106,10 +111,11 @@ export default function ParallaxSection() {
     return (
         <section className="parallax-section">
             <div ref={containerRef} className="parallax-container" />
-            <div ref={textRef} className="parallax-text">
-                What is —
-                <br></br>
-                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Beauty?
+            <div ref={titleRef} className="parallax-text">
+                What is Beauty?
+            </div>
+            <div ref={descriptionRef} className="parallax-description">
+                An interactive guide to a fundamental concept of human understanding.
             </div>
         </section>
     );

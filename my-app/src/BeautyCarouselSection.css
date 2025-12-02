@@ -17,7 +17,13 @@
 
 .text-content p {
     color: black;
-    padding-bottom: 1rem;
+}
+
+.text-caption {
+    position: relative;
+    width: 100%;
+    font-style: italic;
+    font-size: 1rem;
 }
 
 .text-block {
@@ -37,18 +43,19 @@
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 15%; /* moved down to make space for text */
+    top: 15%;
+    /* moved down to make space for text */
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
     animation: autoRun 20s linear infinite;
-    z-index: 2;
 }
 
 @keyframes autoRun {
     from {
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }
+
     to {
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
@@ -59,6 +66,7 @@
     inset: 0 0 0 0;
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+    cursor: pointer;
 }
 
 .banner .slider .item img {
@@ -79,7 +87,7 @@
 
 .overlay-box {
     background: #fff;
-    padding: 2rem;
+    padding: 1rem 3rem 2rem 3rem;
     border-radius: 6px;
     max-width: 500px;
     width: 80%;

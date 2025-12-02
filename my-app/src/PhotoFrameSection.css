@@ -13,6 +13,7 @@
   text-align: center;
   opacity: 0.9;
   pointer-events: none;
+  font-style: inherit;
 }
 
 /* Frame row */
@@ -44,9 +45,9 @@
 
 /* Label area */
 .frame-label {
-  padding: 16px 0;
+  padding: 19px 0 10px 0px;
   text-align: center;
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-style: italic;
 }

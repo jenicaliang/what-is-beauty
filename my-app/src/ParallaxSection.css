@@ -13,14 +13,26 @@
 }
 
 .parallax-text {
-    color: white;
+    color: black;
     font-family: "Playfair Display", serif;
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 17%;
     line-height: 9rem;
-    font-size: 10rem;
+    font-size: 9rem;
     pointer-events: none;
     z-index: 100;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-description {
+    color: black;
+    font-family: inherit;
+    position: absolute;
+    top: 55%;
+    left: 29%;
+    width: 40%;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.7rem;
+    pointer-events: none;
 }

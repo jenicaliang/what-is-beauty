@@ -49,10 +49,10 @@ export default function ScrollingWordSection() {
     {
       word: "Fashion",
       textBoxes: [
-        { text: "Key to self-expression.", top: "15%", left: "8%" },
-        { text: "Fast fashion produces so much waste.", top: "28%", right: "8%" },
-        { text: "I love going shopping and trying on new clothes.", bottom: "15%", left: "12%" },
-        { text: "Only enforces unrealistic standards.", bottom: "25%", right: "15%" },
+        { text: "Key to self-expression.", top: "12%", left: "12%" },
+        { text: "Fast fashion produces so much waste.", top: "18%", right: "8%" },
+        { text: "Some clothes are really pretty.", bottom: "28%", left: "15%" },
+        { text: "Only enforces unrealistic standards.", bottom: "35%", right: "15%" },
       ],
     },
   ];
@@ -127,8 +127,8 @@ export default function ScrollingWordSection() {
     <section className="scroll-section">
       {/* Full page content */}
       <div className="intro-text">
-        <p>And still others are</p>
-        <p>a bit more complicated.</p>
+        And still others are<br></br>
+        a bit more complicated.
       </div>
 
       {/* Inner word scrolling container */}

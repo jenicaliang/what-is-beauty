@@ -4,15 +4,15 @@ import "./PhotoFrameSection.css";
 const photos = [
   {
     label: "An office cubicle.",
-    src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=60"
+    src: "assets/images/office_cubicle.jpg"
   },
   {
     label: "Last night’s dinner.",
-    src: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1000&q=60"
+    src: "assets/images/dinner.jpg"
   },
   {
     label: "Roadside trash.",
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=60"
+    src: "assets/images/trash.jpg"
   }
 ];
 
@@ -28,7 +28,7 @@ export default function PhotoFrameSection() {
   return (
     <section className="photo-section" onMouseMove={handleMouseMove}>
       <p className="corner-text">
-        Others feel ... well,<br />not so beautiful.
+        Other things feel...well,<br />not so beautiful.
       </p>
 
       <div className="frames-container">

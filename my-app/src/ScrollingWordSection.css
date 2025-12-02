@@ -26,6 +26,7 @@
    WORD SCROLL CONTAINER
 ========================= */
 .word-scroll-container {
+  margin-top: 200px;
   position: relative;
   height: 100vh; /* stays on screen while scrolling words */
   width: 100%;

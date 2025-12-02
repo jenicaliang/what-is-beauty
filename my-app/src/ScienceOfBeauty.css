@@ -1,6 +1,6 @@
 .wiring-section {
     padding: 10rem 2rem;
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
 }
 
@@ -50,12 +50,12 @@
 .collapsible-content {
     margin-top: 0.6rem;
     animation: fadeIn 0.3s ease;
-    font-size: 1rem;
     line-height: 1.5;
 }
 
 .collapsible-content p {
     color: black;
+        font-size: 1rem;
 }
 
 /* ----- Collapsible Container ----- */

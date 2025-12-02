@@ -37,7 +37,7 @@ export default function BeautyForm() {
   return (
     <section className="beauty-form-section">
         <div className="beauty-intro">
-            So now that you’ve learned a little about beauty, take a moment to look within.
+            So now that you’ve learned a little about beauty, it's time to look within.
         </div>
         <label htmlFor="beauty-input" className="beauty-prompt">
             What do <i>you</i> find beautiful?
