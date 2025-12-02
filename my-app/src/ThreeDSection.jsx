@@ -4,8 +4,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const MODEL_URLS = [
-    "/assets/models/couch.glb",
-    "/assets/models/mug.glb",
+    "assets/models/couch.glb",
+    "assets/models/mug.glb",
 ];
 
 /**

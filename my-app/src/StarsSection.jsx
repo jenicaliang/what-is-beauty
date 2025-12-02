@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-const MODEL_PATH = "/assets/star_model/star.glb";
+const MODEL_PATH = "assets/star_model/star.glb";
 const STAR_COUNT = 60;
 
 export default function StarsSection() {
