@@ -159,15 +159,7 @@ function makeScene(canvas, shapeIndex) {
     // -------------------------------------------------------------
     // WHEEL ZOOM
     // -------------------------------------------------------------
-    function onWheel(e) {
-        e.preventDefault(); // <-- prevent page from scrolling
 
-        camera.position.z += e.deltaY * 0.0015;
-        camera.position.z = Math.min(Math.max(camera.position.z, 0.8), 4.0);
-    }
-
-    // Use { passive: false } so preventDefault works
-    canvas.addEventListener("wheel", onWheel, { passive: false });
 
 
     // -------------------------------------------------------------
@@ -205,8 +197,6 @@ function makeScene(canvas, shapeIndex) {
         canvas.removeEventListener("touchstart", pointerDown);
         canvas.removeEventListener("touchmove", pointerMove);
         canvas.removeEventListener("touchend", pointerUp);
-
-        canvas.removeEventListener("wheel", onWheel);
 
         // Dispose GLTF meshes deeply
         if (mesh) {
@@ -254,6 +244,7 @@ export default function ThreeDSection() {
 
     return (
         <section className="three-section">
+            <div><p>Click and drag to interact with the objects.</p></div>
             <div className="three-inner">
                 {/* Subsection 1 */}
                 <div className="subsection">

@@ -32,8 +32,8 @@
 .memory-text h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 100;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 3rem;
+    line-height: 4rem;
 }
 
 /* FADE IN after scrolling 50vh */

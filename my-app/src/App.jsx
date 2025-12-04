@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import BackgroundAudio from "./BackgroundAudio.jsx";
 import ScrollBackground from "./ScrollBackground.jsx"; //
 import ProgressBar from "./ProgressBar.jsx";
 import ParallaxSection from "./ParallaxSection.jsx"
@@ -38,6 +39,8 @@ const App = () => {
   }, []);
 
   return (
+    <>
+    <BackgroundAudio />
     <div id="app">
       <ProgressBar />
       <ScrollBackground />
@@ -55,6 +58,7 @@ const App = () => {
       <BeautyPhrase />
       <BeautyForm />
     </div>
+    </>
   );
 };
 

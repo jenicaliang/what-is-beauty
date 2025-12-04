@@ -1,10 +1,11 @@
 .beauty-form-section {
     color: black;
-    min-height: 120vh;
+    min-height: 135vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3rem;
+    padding-bottom: 11rem;
     position: relative;
     flex-direction: column;
 }
@@ -13,14 +14,14 @@
 .beauty-intro {
     width: 40%;
     margin: 0 auto;
-    padding-bottom: 23rem;
+    padding-bottom: 36rem;
     text-align: center;
 }
 
 .beauty-form-container {
     position: relative;
     z-index: 2;
-    width: 70%;
+    width: 60%;
     max-width: 1000px;
     padding: 3rem;
     background: rgba(255, 255, 255, 0.95);
@@ -105,5 +106,35 @@
 
     .beauty-prompt {
         font-size: 1.5rem;
+    }
+}
+
+/* Reveal button */
+.beauty-reveal-btn {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.beauty-reveal-btn:hover {
+    background: #ee9c6a;
+    transform: translateY(-2px);
+}
+
+/* Smooth fade-in animation for the form */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }

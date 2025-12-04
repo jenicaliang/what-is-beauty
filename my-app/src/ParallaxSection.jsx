@@ -20,7 +20,6 @@ export default function ParallaxSection() {
     const titleRef = useRef(null);
     const descriptionRef = useRef(null);
 
-
     useEffect(() => {
         const container = containerRef.current;
         const width = container.clientWidth;
@@ -40,25 +39,45 @@ export default function ParallaxSection() {
         const loader = new THREE.TextureLoader();
         const planes = [];
 
+        // --- IMAGE LAYERS ---
         LAYERS.forEach((src, i) => {
             const tex = loader.load(`assets/images/parallax/${src}`, () => {
-                console.log(`Loaded: ${src} at z=${-2 + (i * 0.2)}, renderOrder=${i}`);
+                console.log(`Loaded: ${src} at z=${-2 + i * 0.05}`);
             });
+
             const mat = new THREE.MeshBasicMaterial({
                 map: tex,
                 transparent: true,
                 side: THREE.DoubleSide,
                 depthTest: false
             });
+
             const geo = new THREE.PlaneGeometry(16, 9);
             const plane = new THREE.Mesh(geo, mat);
 
-            // Start at z=-2 (far) and move toward camera (z=0)
-            plane.position.z = -2 + (i * 0.05);
-            plane.renderOrder = i; // Force rendering order
+            plane.position.z = -2 + i * 0.05;
+            plane.renderOrder = i;
+
             scene.add(plane);
             planes.push(plane);
         });
+
+        // --- WHITE OVERLAY PLANE (0.5 opacity) ---
+        const whiteMat = new THREE.MeshBasicMaterial({
+            color: 0xffffff,
+            opacity: 0.5,
+            transparent: true,
+            depthTest: false
+        });
+
+        const whiteGeo = new THREE.PlaneGeometry(16, 9);
+        const whitePlane = new THREE.Mesh(whiteGeo, whiteMat);
+
+        // Place above all images but below HTML text
+        whitePlane.position.z = 0.3;
+        whitePlane.renderOrder = 999;
+
+        scene.add(whitePlane);
 
         // Mouse movement parallax
         let mouseX = 0;
@@ -72,18 +91,19 @@ export default function ParallaxSection() {
         function animate() {
             requestAnimationFrame(animate);
 
+            // Move all parallax planes
             planes.forEach((plane, i) => {
                 plane.position.x = mouseX * 0.1 * (i + 1) * 0.1;
                 plane.position.y = mouseY * 0.1 * (i + 1) * 0.1;
             });
 
+            // Move text slightly
             if (titleRef.current) {
                 titleRef.current.style.transform = `translate3d(${mouseX * 20}px, ${mouseY * 20}px, 0)`;
             }
             if (descriptionRef.current) {
                 descriptionRef.current.style.transform = `translate3d(${mouseX * 15}px, ${mouseY * 15}px, 0)`;
             }
-
 
             renderer.render(scene, camera);
         }

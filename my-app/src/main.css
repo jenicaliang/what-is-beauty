@@ -12,18 +12,19 @@ body, p {
 h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 100;
-    line-height: 3rem;
-    font-size: 2rem;
+    line-height: 4rem;
+    font-size: 3rem;
 }
 
-/* All direct children of the app container will fade/blur */
-#app > * {
+/* Fade/blur ALL direct children of #app EXCEPT those with .no-fade */
+#app > *:not(.no-fade) {
   opacity: 0;
   filter: blur(10px);
   transition: opacity 1s ease, filter 1s ease;
 }
 
-#app > *.in-view {
+/* Only the non-excluded ones will animate when in-view */
+#app > *:not(.no-fade).in-view {
   opacity: 1;
   filter: blur(0);
 }

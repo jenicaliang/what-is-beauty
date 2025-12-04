@@ -68,13 +68,17 @@ const VideoScrollSection = () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("scroll", updateRect);
     };
-  }, );
+  },);
 
   return (
-    <section id="video-scroll-section" ref={sectionRef} style={{ position: "relative", background: "black" }}>
-      <canvas id="video-canvas" ref={canvasRef} style={{ position: "sticky", top: 0, width: "100%", height: "auto" }}></canvas>
-      <div id="set-height" />
-    </section>
+    <div className="no-fade">
+      {
+        <section id="video-scroll-section" ref={sectionRef} style={{ position: "relative", background: "black" }}>
+          <canvas id="video-canvas" ref={canvasRef} style={{ position: "sticky", top: 0, width: "100%", height: "auto" }}></canvas>
+          <div id="set-height" />
+        </section>
+}
+    </div>
   );
 };
 

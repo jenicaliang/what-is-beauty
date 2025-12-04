@@ -77,7 +77,7 @@ export default function BeautyPhrase() {
     updateAnimation();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  });
 
   return (
     <div className="scroll-container">

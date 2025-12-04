@@ -8,9 +8,9 @@ export default function ScrollBackground() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      if (scrollY < 1200) {
+      if (scrollY < 2000) {
         document.documentElement.style.backgroundColor = "#ffffff"; // white
-      } else if (scrollY >= 1200 && scrollY < 10400) {
+      } else if (scrollY >= 2000 && scrollY < 10400) {
         document.documentElement.style.backgroundColor = "#000000"; // black
       } else if (scrollY >= 10400 && scrollY < 15000) {
         document.documentElement.style.backgroundColor = "#ffffff"; // white

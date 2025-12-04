@@ -6,7 +6,7 @@ export default function GradientMemorySection() {
     <section className="memory-section">
       <div className="memory-text fade-in-trigger">
         <h1>
-          But instinct isn't everything <br />
+          But instinct isn't everything.<br />
           Personal experience shapes beauty <br />
           just as strongly, if not more.
         </h1>

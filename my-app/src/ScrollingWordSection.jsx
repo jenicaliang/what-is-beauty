@@ -22,7 +22,7 @@ export default function ScrollingWordSection() {
     {
       word: "Makeup",
       textBoxes: [
-        { text: "I conisder it a form of art!", top: "25%", left: "12%" },
+        { text: "I consider it a form of art!", top: "25%", left: "12%" },
         { text: "More societal pressure.", top: "30%", right: "15%" },
         { text: "Express yourself however you want.", bottom: "20%", left: "20%" },
         { text: "It's really an exploitative industry.", bottom: "35%", right: "8%" },
